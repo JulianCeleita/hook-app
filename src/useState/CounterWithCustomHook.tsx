@@ -2,9 +2,8 @@ import { useCounter } from '../hooks/useCounter';
 
 export const CounterWithCustomHook = () => {
 
-    const initialCounter = 10
-
-    const { counter } = useCounter();                // Como retorné un {} desde el customHook uso las {} en el const
+    // Traigo el counter desde el customHook:
+    const { counter, increase, reset, decrease } = useCounter();                // Como retorné un {} desde el customHook uso las {} en el const
 
     return (
         <>
@@ -13,9 +12,9 @@ export const CounterWithCustomHook = () => {
 
         <hr />
 
-        <button className="btn btn-primary" onClick={()=>{setCounter (counter + 1) } }> +1 </button>
-        <button className="btn btn-primary" onClick={()=>{setCounter (initialCounter)}}> Reset </button>
-        <button className="btn btn-primary" onClick={()=>{setCounter (counter - 1)}}> -1 </button>
+        <button className="btn btn-primary" onClick={increase}> +1 </button>
+        <button className="btn btn-primary" onClick={reset}> Reset </button>
+        <button className="btn btn-primary" onClick={decrease}> -1 </button>
 
         </>
     )
