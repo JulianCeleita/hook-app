@@ -5,7 +5,7 @@ export const CounterApp = () => {
 
     //const [counter, setCounter] = useState(10);            // Llamamos el useState y le damos el valor inicial (counter - 10) y el modificado (setCounter)
 
-    const [state, setCounter] = useState({                   // State va a ser el objeto de contadores, abajo lo desestructuro individualmente
+    const [state, setCounter] = useState({                   // State va a ser la variable-objeto de contadores, abajo lo desestructuro individualmente
         counter1: 10,
         counter2: 20,
         counter3: 30
