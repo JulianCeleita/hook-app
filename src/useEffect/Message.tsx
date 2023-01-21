@@ -28,7 +28,7 @@ export const Message = () => {
   return (
     <>
     <h3> Usuario ya en uso </h3>
-    {JSON.stringify( coords )}                {/* Para mostrar un objeto en html */}
+    {JSON.stringify( coords )}                       {/* Para mostrar un objeto en html */}
     </>
     )
 }
