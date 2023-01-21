@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export const SimpleForm = () => {
+
+    // USESTATE
 
     const [formState, setFormState] = useState({
         username: 'delta',
@@ -16,7 +18,19 @@ export const SimpleForm = () => {
             ...formState,                                     // conservo los valores de lo que no quiero cambiar
             [ name ]: value                                   // propiedad name va a tener establecido el nuevo value, me permite escribir y que aparezca en el campo de texto
         });
-    } 
+    }
+
+    // USEEFFECT
+
+    useEffect(() => {           // ejecuta una función al ser llamado (callBack)
+      first
+    
+      return () => {
+        second
+      }
+    }, [third])
+    
+
 
   return (
     <>
