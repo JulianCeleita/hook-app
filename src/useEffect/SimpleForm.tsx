@@ -21,16 +21,20 @@ export const SimpleForm = () => {
     }
 
     // USEEFFECT
+    // ejecuta una función al ser llamado (callBack), el segundo valor es el que al cambiarse dispara el useEffect, si está solo con [] se dispara solo la 1er vez que se renderiza
 
-    useEffect(() => {           // ejecuta una función al ser llamado (callBack)
-      first
+    useEffect(() => {           
+      console.log('UseEffect render');
+    }, [])                                  // Solo la 1er vez que se renderiza
     
-      return () => {
-        second
-      }
-    }, [third])
+    useEffect(() => {
+      console.log('form changed')
+    }, [ formState ])                        // Al cambiar el cualquier cosa en el formulario
     
-
+    useEffect(() => {
+      console.log('email changed')
+    }, [ email ])                           // Al cambiar el email
+    
 
   return (
     <>
