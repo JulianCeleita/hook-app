@@ -25,13 +25,11 @@ export const useFetch = ( url: any ) => {
         })
     }
 
-
     useEffect(() => {           // espera funciones puras, no promesas
       
         getFetch();
 
     }, [url])
-    
     
   return {
     data: state.data,

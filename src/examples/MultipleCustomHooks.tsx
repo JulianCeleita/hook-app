@@ -1,12 +1,14 @@
 import { useFetch } from "../hooks/useFetch";
+import { useCounter } from '../hooks/useCounter';
 
 export const MultipleCustomHooks = () => {
-  const { data, isLoading, hasError } = useFetch(
-    "https://api.breakingbadquotes.xyz/v1/quotes"
-  );
+    
+  const {counter, increase} = useCounter(1);
 
-    const { author, quote } = !!data && data[0];      // doble negación: ! = false, !! = true desestructuro el author y quote de data, si data es true, entonces muestre el primer valor [0] 
-
+  const { data, isLoading, hasError } = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes?${counter}`);
+    
+  const { author, quote } = !!data && data[0];      // doble negación: ! = false, !! = true desestructuro el author y quote de data, si data es true, entonces muestre el primer valor [0] 
+  
   return (
     <>
       <h1> BreakingBad Quotes</h1>
@@ -22,7 +24,7 @@ export const MultipleCustomHooks = () => {
         </blockquote>
       )}
 
-      <button className="btn btn-primary"> 
+      <button className="btn btn-primary" onClick={ ()=> increase() }> 
       Next quote </button>
     </>
   );
