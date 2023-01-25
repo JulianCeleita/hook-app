@@ -11,10 +11,11 @@ import './index.css'
 // import { Layout } from './useLayoutEffect/Layout';
 // import { Memorize } from './memos/Memorize';
 // import { MemoHook } from './memos/MemoHook';
-import { CallbackHooks } from './memos/CallbackHooks';
+// import { CallbackHooks } from './memos/CallbackHooks';
+import { Father } from './memoHomework/Father';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 //<React.StrictMode>
-    <CallbackHooks />
+    <Father />
  // </React.StrictMode>
 )
