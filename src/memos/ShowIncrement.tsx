@@ -8,7 +8,7 @@ export const ShowIncrement = React.memo(({ increase }: any) => {
         <button
             className="btn btn-primary"
             onClick={ ()=> {
-                increase();
+                increase( 5 );              // Incrementará de 5 en 5, le paso este valor como value al useCallback
             }}
         > 
             Incrementar 

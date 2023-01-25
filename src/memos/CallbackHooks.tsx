@@ -6,8 +6,8 @@ export const CallbackHooks = () => {
     const [counter, setCounter] = useState(10);
 
     const increaseFather = useCallback(         // Memoriza en memoria para no renderizar el componente completo
-      () => {
-        setCounter ( (value)=> value + 1 );    // El valor que le dará a value será el value anterior + 1
+      (value:number) => {
+        setCounter ( (c)=> c + value );         // c del counter, le estoy pasando el value desde el ShowIncrement, tomo c que es el valor del counter, y le sumo value (5)
       },
       [],
     )
