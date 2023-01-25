@@ -14,6 +14,8 @@ import './index.css'
 // import { CallbackHooks } from './memos/CallbackHooks';
 import { Father } from './memoHomework/Father';
 
+import './useReducer/intro-reducer';
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 //<React.StrictMode>
     <Father />
