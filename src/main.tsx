@@ -8,10 +8,11 @@ import './index.css'
 // import { FormWithCustomHook } from './useEffect/FormWithCustomHook';
 // import { MultipleCustomHooks } from './examples/MultipleCustomHooks';
 // import { FocusScreen } from './useRef/FocusScreen';
-import { Layout } from './useLayoutEffect/Layout';
+// import { Layout } from './useLayoutEffect/Layout';
+import { Memorize } from './memos/Memorize';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 //<React.StrictMode>
-    <Layout />
+    <Memorize />
  // </React.StrictMode>
 )
