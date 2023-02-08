@@ -12,12 +12,13 @@ import './index.css'
 // import { Memorize } from './memos/Memorize';
 // import { MemoHook } from './memos/MemoHook';
 // import { CallbackHooks } from './memos/CallbackHooks';
-import { Father } from './memoHomework/Father';
+// import { Father } from './memoHomework/Father';
+// import './useReducer/intro-reducer';
+import { TodoApp } from './useReducer/TodoApp';
 
-import './useReducer/intro-reducer';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 //<React.StrictMode>
-    <Father />
+    <TodoApp />
  // </React.StrictMode>
 )
