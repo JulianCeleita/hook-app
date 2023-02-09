@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { TodoList } from "./TodoList";
 import { todoReducer } from "./todoReducer";
 
 export const initialState = [
@@ -28,11 +29,11 @@ export const TodoApp = () => {
       <hr />
 
       <div className="row">
-        <div className="col">
-          {}
+        <div className="col-7">
+          <TodoList todos={ todos }/>
         </div>
 
-        <div className="col">
+        <div className="col-5">
           <h4>Add To Do</h4>
           <hr />
           {}
