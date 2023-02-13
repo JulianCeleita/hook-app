@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom";
-import { HomePage, LoginPage, AboutPage } from './';
+import { Navigate, Route, Routes } from "react-router-dom";
+import { HomePage, LoginPage, AboutPage } from "./";
 
 export const MainApp = () => {
   return (
@@ -8,9 +8,11 @@ export const MainApp = () => {
       <hr />
 
       <Routes>
-        <Route path="/" element={ <HomePage/> } />
-        <Route path="about" element={ <AboutPage/> } />
-        <Route path="login" element={ <LoginPage/> } />
+        <Route path="/" element={<HomePage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="login" element={<LoginPage />} />
+
+        <Route path="/*" element={<Navigate to="/about" />} />
       </Routes>
     </>
   );
